@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат загрузчика изображений</title>
+</head>
+<body>
+    <h1>Готово, наслаждайся...</h1>
+    <ul>
+        {% for image in images %}
+            <li><img src="{{ url_for('static', filename='images/' ~ image) }}" alt="{{ image }}" width="200"></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">На главную страницу</a>
+</body>
+</html>
